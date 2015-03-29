@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <li class=""> <%= link_to "Welcome #{current_user.email}"  %> </li>
+  <li> <%= link_to 'Logout' , :destroy_user_session, :method => :delete %></li>
+<% else %>
+    <li class=""><%= link_to 'Sign In', :new_user_session %> </li>
+     <li class=""><%= link_to 'Sign Up', :new_user_registration %></li>
+<% end %>

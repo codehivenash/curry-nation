@@ -1,0 +1,18 @@
+<ul class="pricing-table">
+<li class="title"><%= link_to "Food Preferences" , recipes_path %></li>
+  <% @food_preferences.each do |r|%>
+    <li class="description"><%= link_to "#{r.name}", fetch_by_pref_path(:id => r.id), remote: true %> </li>
+  <% end %>
+</ul>
+<ul class="pricing-table">
+  <li class="title">Food Type</li>
+  <% @food_types.each do |r|%>
+    <li class="description"><%= link_to "#{r.name}", fetch_by_type_path(:id => r.id), remote: true %> </li>
+  <% end %>
+</ul>
+<ul class="pricing-table">
+  <li class="title">Cuisine</li>
+  <% @cuisines.each do |r|%>
+    <li class="description"><%= link_to "#{r.name}", fetch_by_cuisine_path(:id => r.id), remote: true %> </li>
+  <% end %>
+</ul>

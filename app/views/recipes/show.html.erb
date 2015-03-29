@@ -1,0 +1,48 @@
+<!--render the sidebar with the fodd_prefs, food_types, cuisines-->
+<%= render 'recipes/helpers/columns' %>
+
+<div class="large-10 columns">
+<p>
+  <strong>Title:</strong>
+  <%= @recipe.title %>
+</p>
+
+<p>
+  <strong>Cooking time:</strong>
+  <%= @recipe.cooking_time %>
+</p>
+
+<p>
+  <strong>Difficulty level:</strong>
+  <%= @recipe.difficulty_level %>
+</p>
+
+<p>
+  <strong>Food type:</strong>
+  <%= @recipe.food_type.name %>
+</p>
+
+<p>
+  <strong>Food preference:</strong>
+  <%= @recipe.food_preference.name %>
+</p>
+
+<p>
+  <strong>Cuisine:</strong>
+  <%= @recipe.cuisine.name %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @recipe.ingredients %>
+</pe
+
+<p>
+  <strong>Procedure:</strong>
+  <%= @recipe.procedure %>
+</p>
+
+
+<%= link_to 'Edit', edit_recipe_path(@recipe), class: 'button tiny'%>
+<%= link_to 'Back', recipes_path , class: 'button tiny'%>
+</div>

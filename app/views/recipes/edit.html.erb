@@ -1,0 +1,9 @@
+<!--render the sidebar with the fodd_prefs, food_types, cuisines-->
+<%= render 'recipes/helpers/columns' %>
+
+<div class="large-10 columns">
+  <h1>Editing Recipe</h1>
+  <%= render 'form' %>
+  <%= link_to 'Show', @recipe , class: 'button small'%>
+  <%= link_to 'Back', recipes_path , class: 'button small'%>
+</div>
